@@ -1,7 +1,7 @@
 class CreateRecipeIngredients < ActiveRecord::Migration
   def change
     create_table :recipe_ingredients do |t|
-      t.string :type
+      t.string :step
       t.float :amount
       t.string :units
       t.string :addition_time
