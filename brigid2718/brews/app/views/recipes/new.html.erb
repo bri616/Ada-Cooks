@@ -10,6 +10,7 @@
     <%= text_area_tag "recipe_form[instructions]" %>
   </div>
   <div>
+    <%= select_tag "ingredient_id", options_for_select(Ingredient.all.collect{ |i| [i.name, i.id]}) %>
     <% Ingredient.all.each do |ingredient| %>
     <div>
       <%= check_box_tag "recipe_form[ingredients][]", ingredient.id, false, id: "ingredient_id_#{ingredient.id}" %>
