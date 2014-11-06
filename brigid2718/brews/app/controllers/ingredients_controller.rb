@@ -23,7 +23,7 @@ class IngredientsController < ApplicationController
   end
 
   def new
-    @ingredient = Movie.new
+    @ingredient = Ingredient.new
     render :template => "/ingredients/edit_new_form", :locals => { :obj => @ingredient }
   end
 
