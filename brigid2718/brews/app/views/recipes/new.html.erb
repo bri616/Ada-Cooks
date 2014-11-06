@@ -13,7 +13,9 @@
   </div>
   <div>
     <a href="javascript:;" id="addNewIngredient">Add Another Ingredient</a>
-    <%= select_tag "ingredient_id", options_for_select(Ingredient.all.collect{ |i| [i.name, i.id]}) %>
+  </div>
+  <div>
+    <%= render partial: "new_ingredient_form" %>
   </div>
 
 </div>
@@ -22,6 +24,8 @@
 
 <% end %>
 
+<!-- http://stackoverflow.com/questions/17839147/dynamically-add-fields-in-rails-with-out-nested-attributes -->
+
 <div class="hide" id="new_ingredient_form">
-  <%= render partial: "new_ingredient_form", locals: {skill: false} %>
+  <%= render partial: "new_ingredient_form" %>
 </div>

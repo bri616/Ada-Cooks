@@ -1,6 +1,3 @@
 <div class="newIngredientForm">
-  <%= label_tag 'tag' %>
-  <%= text_field_tag 'tags[]' %>
-  <%= label_tag 'weight' %>
-  <%= text_field_tag 'weights[]' %>
+<%= select_tag "ingredient_id", options_for_select(Ingredient.all.collect{ |i| [i.name, i.id]}) %>
 </div>
