@@ -15,7 +15,9 @@
     <a href="javascript:;" id="addNewIngredient">Add Another Ingredient</a>
   </div>
   <div>
-    <%= render partial: "new_ingredient_form" %>
+    <% 3.times do %>
+      <%= render partial: "new_ingredient_form" %>
+    <% end %>
   </div>
 
 </div>
