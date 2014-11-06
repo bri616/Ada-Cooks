@@ -1,6 +1,8 @@
-<h1>New Recipe</h1>
+<div class="test"><h1>New Recipe</h1></div>
+
 
 <%= form_tag recipes_path do %>
+<div id="recipe_form">
   <div>
     <%= label_tag "recipe_form[title]", "Title" %>
     <%= text_field_tag "recipe_form[title]" %>
@@ -10,8 +12,16 @@
     <%= text_area_tag "recipe_form[instructions]" %>
   </div>
   <div>
+    <a href="javascript:;" id="addNewIngredient">Add Another Ingredient</a>
     <%= select_tag "ingredient_id", options_for_select(Ingredient.all.collect{ |i| [i.name, i.id]}) %>
   </div>
 
+</div>
+
   <%= submit_tag %>
+
 <% end %>
+
+<div class="hide" id="new_ingredient_form">
+  <%= render partial: "new_ingredient_form", locals: {skill: false} %>
+</div>
