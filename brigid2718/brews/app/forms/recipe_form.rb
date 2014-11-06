@@ -4,20 +4,26 @@ class RecipeForm
 
   end
 
-  def save
+  def recipe
+    @recipe
+  end
+
+  def submit
     # create an instance of recipe Recipe class
     # create recipe ingredients for each id in ingredients key
-    recipe = Recipe.new
+    # say whether or not the save was successful
 
-    @ingredients = []
+    @recipe = Recipe.create(
+      title:      @attributes[:title],
+      instructions: @attributes[:instructions]
+    )
+
     @attributes[:ingredients].each do |id|
-      @ingredients << Ingredient.find(id)
+      @recipe.ingredients << Ingredient.find(id)
     end
 
+    @recipe.valid?
 
-    @ingredients.each do |ingredient|
-      recipe.recipe_ingredients << ingredient
-    end
 
   end
 end
