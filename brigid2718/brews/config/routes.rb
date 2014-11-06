@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+
+  root "brewbook#index"
+
   # INGREDIENTS
   get     "/ingredients",         to: "ingredients#index",  as: :ingredients
   post    "/ingredients",         to: "ingredients#create"
