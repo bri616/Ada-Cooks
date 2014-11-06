@@ -2,12 +2,20 @@
 
 <%= form_tag recipes_path do %>
   <div>
-    <%= label_tag "recipe_form[name]" %>
+    <%= label_tag "recipe_form[name]", "Name" %>
     <%= text_field_tag "recipe_form[name]" %>
   </div>
   <div>
-    <%= label_tag "recipe_form[directions]" %>
+    <%= label_tag "recipe_form[directions]", "Directions" %>
     <%= text_area_tag "recipe_form[directions]" %>
+  </div>
+  <div>
+    <% Ingredient.all.each do |ingredient| %>
+    <div>
+      <%= check_box_tag "recipe_form[ingredients][]", ingredient.id %>
+      <%= label_tag "recipe_form[ingredients][]", ingredient.name %>
+    </div>
+    <% end %>
   </div>
 
   <%= submit_tag %>
