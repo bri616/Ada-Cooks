@@ -15,6 +15,13 @@ Rails.application.routes.draw do
 
   get     "ingredients/:id/edit", to: "ingredients#edit",   as: :edit_ingredient
 
+  # RECIPES
+
+  post "/recipes",  to: "recipes#create", as: :recipes
+
+  get "/recipes/new", to: "recipes#new", as: :new_recipe
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
