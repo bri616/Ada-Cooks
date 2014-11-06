@@ -21,6 +21,8 @@ Rails.application.routes.draw do
 
   get "/recipes/new", to: "recipes#new", as: :new_recipe
 
+  get "recipes/:id",  to: "recipes#show", as: :recipe
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
