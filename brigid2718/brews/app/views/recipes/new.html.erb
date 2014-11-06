@@ -12,8 +12,8 @@
   <div>
     <% Ingredient.all.each do |ingredient| %>
     <div>
-      <%= check_box_tag "recipe_form[ingredients][]", ingredient.id %>
-      <%= label_tag "recipe_form[ingredients][]", ingredient.name %>
+      <%= check_box_tag "recipe_form[ingredients][]", ingredient.id, false, id: "ingredient_id_#{ingredient.id}" %>
+      <%= label_tag "ingredient_id_#{ingredient.id}", ingredient.name %>
     </div>
     <% end %>
   </div>
