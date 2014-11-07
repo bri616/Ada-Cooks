@@ -23,6 +23,7 @@ class RecipeForm
 
   end
 
-  def update_quantity
+  def update_quantity(id, quantity)
+    RecipeIngredient.find(id).update(amount: quantity)
   end
 end
