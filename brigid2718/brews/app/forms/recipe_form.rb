@@ -19,7 +19,7 @@ class RecipeForm
     )
 
     @attributes[:ingredients].each do |id|
-      @recipe.ingredients << Ingredient.find(id)
+        @recipe.ingredients << Ingredient.find(id) if id.to_i > 0
     end
 
     @recipe.valid?
