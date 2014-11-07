@@ -10,7 +10,9 @@
   </div>
 
   <div class="col-sm-6">
-    something
+    <%= text_field_tag "recipe_form[recipe_ingredient_quantity][]",
+    "Enter a quantity",
+    {:class => 'form-control'} %>
   </div>
 
 </div>

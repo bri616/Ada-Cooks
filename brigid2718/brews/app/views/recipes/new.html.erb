@@ -1,15 +1,15 @@
 <div class="test"><h1>New Recipe</h1></div>
 
 
-<%= form_tag recipes_path do %>
+<%= form_tag recipes_path, {:role => 'form'} do %>
 <div id="recipe_form">
   <div>
     <%= label_tag "recipe_form[title]", "Title" %>
-    <%= text_field_tag "recipe_form[title]" %>
+    <%= text_field_tag "recipe_form[title]",nil, {:class => 'form-control'} %>
   </div>
   <div>
     <%= label_tag "recipe_form[instructions]", "Instructions" %>
-    <%= text_area_tag "recipe_form[instructions]" %>
+    <%= text_area_tag "recipe_form[instructions]",nil, {:class => 'form-control'} %>
   </div>
   <div>
     <a href="javascript:;" id="addNewIngredient">Add Another Ingredient</a>
