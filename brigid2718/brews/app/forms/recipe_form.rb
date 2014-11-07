@@ -22,4 +22,7 @@ class RecipeForm
     @recipe.valid?
 
   end
+
+  def update_quantity
+  end
 end
