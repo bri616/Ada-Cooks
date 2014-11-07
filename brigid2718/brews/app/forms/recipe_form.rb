@@ -9,9 +9,6 @@ class RecipeForm
   end
 
   def submit
-    # create an instance of recipe Recipe class
-    # create recipe ingredients for each id in ingredients key
-    # say whether or not the save was successful
 
     @recipe = Recipe.create(
       title:      @attributes[:title],
@@ -23,7 +20,6 @@ class RecipeForm
     end
 
     @recipe.valid?
-
 
   end
 end
