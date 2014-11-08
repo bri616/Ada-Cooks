@@ -1,0 +1,12 @@
+<h1>All Recipes</h1>
+
+<% @recipes.each do |recipe| %>
+<div class="row">
+  <div class="col-xs-6">
+    <%= link_to recipe.title, recipe_path(recipe) %>
+  </div>
+  <div class="col-xs-6">
+    EDIT RECIPE
+  </div>
+</div>
+<% end %>
