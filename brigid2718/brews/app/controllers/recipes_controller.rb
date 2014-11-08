@@ -1,5 +1,8 @@
 class RecipesController < ApplicationController
 
+  def index
+  end
+
   def create
     # raise params.inspect
     @recipe_form = RecipeForm.new(params[:recipe_form])
