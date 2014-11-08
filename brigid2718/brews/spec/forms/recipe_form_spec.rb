@@ -16,5 +16,9 @@ describe RecipeForm do
       recipe_ingredient = RecipeIngredient.find(id)
       expect(recipe_ingredient.amount).to eq quantity
     end
+
+    it "updates a recipe_ingredient through the submit function" do
+      
+    end
   end
 end
