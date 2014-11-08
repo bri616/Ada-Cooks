@@ -17,12 +17,14 @@ Rails.application.routes.draw do
 
   # RECIPES
 
-  get     "/recipes",       to: "recipes#index",  as: :recipes
-  post    "/recipes",       to: "recipes#create"
+  get     "/recipes",         to: "recipes#index",  as: :recipes
+  post    "/recipes",         to: "recipes#create"
 
-  get     "/recipes/new",   to: "recipes#new",    as: :new_recipe
+  get     "/recipes/new",     to: "recipes#new",    as: :new_recipe
 
-  get     "recipes/:id",    to: "recipes#show",   as: :recipe
+  get     "recipes/:id",      to: "recipes#show",   as: :recipe
+
+  get     "recipes/:id/edit", to: "recipes#edit",   as: :edit_recipe
 
 
   # The priority is based upon order of creation: first created -> highest priority.
