@@ -1,6 +1,6 @@
 <div class="row form-group newIngredientForm">
 
-  <div class="col-sm-6">
+  <div class="col-sm-4">
   <%= select_tag "recipe_form[ingredients][]",
     options_for_select(Ingredient.all.collect{ |i| [i.name, i.id]}),
     {:prompt => 'Select an ingredient...',
@@ -9,10 +9,15 @@
   %>
   </div>
 
-  <div class="col-sm-6">
+  <div class="col-sm-4">
     <%= text_field_tag "recipe_form[recipe_ingredient_quantity][]",
     "Enter a quantity",
     {:class => 'form-control'} %>
   </div>
 
+  <div class="col-sm-4">
+    <%= select_tag "recide_form[recipe_ingredient_units][]",
+    options_for_select(["pounds", "ounces", "grams" ],"pounds"),
+    {:class => 'form-control'} %>
+  </div>
 </div>
