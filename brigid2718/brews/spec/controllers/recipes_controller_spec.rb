@@ -15,4 +15,8 @@ describe RecipesController do
     get :index
     expect(assigns(:recipes)).to eq([recipe])
   end
+
+  it "ed
+
+  end
 end
