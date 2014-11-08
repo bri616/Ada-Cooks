@@ -1,7 +1,6 @@
 class RecipeForm
   def initialize(attributes)
     @attributes = attributes
-
   end
 
   def recipe
@@ -16,7 +15,7 @@ class RecipeForm
     )
 
     @attributes[:ingredients].each_with_index do |id, index|
-      if id.to_i > 0
+      if id != ""
         recipe_ingredient = @recipe.recipe_ingredients.create(ingredient_id: id)
         update_quantity(recipe_ingredient.id, @attributes[:recipe_ingredient_quantity][index])
         update_units(recipe_ingredient.id, @attributes[:recipe_ingredient_units][index])
