@@ -10,4 +10,9 @@ describe RecipesController do
     expect(response).to render_template(:index)
   end
 
+  it "index assigns @recipes" do
+    recipe = Recipe.create()
+    get :index
+    expect(assigns(:recipes)).to eq([recipe])
+  end
 end
