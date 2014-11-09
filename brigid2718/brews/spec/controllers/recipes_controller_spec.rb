@@ -16,7 +16,9 @@ describe RecipesController do
     expect(assigns(:recipes)).to eq([recipe])
   end
 
-  it "ed
-
+  it "edit assigns @recipe" do
+    recipe = Recipe.create()
+    get :edit, id: recipe
+    expect(assigns(:recipe)).to eq(recipe)
   end
 end
