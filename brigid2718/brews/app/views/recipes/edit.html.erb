@@ -1,7 +1,7 @@
 <div class="test"><h1>Edit Recipe</h1></div>
 
 
-<%= form_tag recipe_path, {:role => 'form'} do %>
+<%= form_tag recipe_path, {:role => 'form', :method => 'PATCH'} do %>
 <div id="recipe_form">
   <div>
     <%= label_tag "recipe_form[title]", "Title" %>

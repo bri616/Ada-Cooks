@@ -24,5 +24,7 @@ describe RecipeForm do
       recipe_ingredient = RecipeIngredient.find(id)
       expect(recipe_ingredient.units).to eq units
     end
+
+    
   end
 end

@@ -22,5 +22,4 @@ describe RecipesController do
     expect(assigns(:recipe)).to eq(recipe)
   end
 
-  it "update "
 end
