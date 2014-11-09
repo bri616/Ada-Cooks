@@ -1,0 +1,33 @@
+<div class="test"><h1>New Recipe</h1></div>
+
+
+<%= form_tag recipes_path, {:role => 'form'} do %>
+<div id="recipe_form">
+  <div>
+    <%= label_tag "recipe_form[title]", "Title" %>
+    <%= text_field_tag "recipe_form[title]",nil, {:class => 'form-control'} %>
+  </div>
+  <div>
+    <%= label_tag "recipe_form[instructions]", "Instructions" %>
+    <%= text_area_tag "recipe_form[instructions]",nil, {:class => 'form-control'} %>
+  </div>
+  <div>
+    <a href="javascript:;" id="addNewIngredient">Add Another Ingredient</a>
+  </div>
+  <div>
+    <% @recipe.recipe_ingredients.each do |r_ingredient| %>
+      <%= render "exist_ingredient_form", ing: r_ingredient %>
+    <% end %>
+  </div>
+
+</div>
+
+  <%= submit_tag %>
+
+<% end %>
+
+<!-- http://stackoverflow.com/questions/17839147/dynamically-add-fields-in-rails-with-out-nested-attributes -->
+
+<div class="hide" id="new_ingredient_form">
+  <%= render partial: "new_ingredient_form" %>
+</div>

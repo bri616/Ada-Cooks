@@ -1,0 +1,9 @@
+<div class="row form-group newIngredientForm">
+
+  <div class="col-sm-4">
+  <%= select_tag "recipe_form[ingredients][]",
+    options_for_select(Ingredient.all.collect{ |i| [i.name, i.id]},
+    { :selected => ing.ingredient.id }),
+    { :class => 'form-control',}
+  %>
+  </div>

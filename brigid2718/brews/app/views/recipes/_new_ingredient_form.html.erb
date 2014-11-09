@@ -4,7 +4,7 @@
   <%= select_tag "recipe_form[ingredients][]",
     options_for_select(Ingredient.all.collect{ |i| [i.name, i.id]}),
     {:prompt => 'Select an ingredient...',
-     :class => 'form-control'
+     :class => 'form-control',
      }
   %>
   </div>
