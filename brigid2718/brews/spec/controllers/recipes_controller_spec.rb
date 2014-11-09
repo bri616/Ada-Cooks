@@ -21,4 +21,6 @@ describe RecipesController do
     get :edit, id: recipe
     expect(assigns(:recipe)).to eq(recipe)
   end
+
+  it "update "
 end
