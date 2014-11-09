@@ -7,3 +7,16 @@
     { :class => 'form-control',}
   %>
   </div>
+
+  <div class="col-sm-4">
+    <%= text_field_tag "recipe_form[recipe_ingredient_quantity][]",
+    ing.amount,
+    {:class => 'form-control'} %>
+  </div>
+
+  <div class="col-sm-4">
+    <%= select_tag "recipe_form[recipe_ingredient_units][]",
+    options_for_select(["pounds", "ounces", "grams" ],ing.units),
+    {:class => 'form-control'} %>
+  </div>
+</div>
