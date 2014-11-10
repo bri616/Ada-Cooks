@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :recipe_ingredients
+
   root "brewbook#index"
 
   # INGREDIENTS
@@ -25,7 +27,7 @@ Rails.application.routes.draw do
   get     "recipes/:id",      to: "recipes#show",   as: :recipe
   patch   "recipes/:id",      to: "recipes#update"
   put     "recipes/:id",      to: "recipes#update"
-  delete  "recipes/:id",      to: "recipes#destroy"  
+  delete  "recipes/:id",      to: "recipes#destroy"
 
   get     "recipes/:id/edit", to: "recipes#edit",   as: :edit_recipe
 
