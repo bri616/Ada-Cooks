@@ -35,4 +35,12 @@ class RecipesController < ApplicationController
     end
   end
 
+  def destroy
+    @recipe = Recipe.find(params[:id])
+    if @recipe.destroy
+      redirect_to recipes_path
+    else
+      raise "error"
+    end
+  end
 end
