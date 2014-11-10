@@ -12,9 +12,25 @@
 <body>
 <div class="container-fluid">
     <div class="header">
+      <div class="row">
       <div class="brand">
         <h1><%= link_to "Ada Brews", root_path, :class=>"brand-title-link" %></h1>
         <h2>homebrew recipes with lots of love</h2>
+      </div>
+      </div><!-- /row -->
+      <div class="row">
+      <div class="col-xs-3">
+        <%= link_to "All Recipes", recipes_path %>
+      </div>
+      <div class="col-xs-3">
+        <%= link_to "All Ingredients", ingredients_path %>
+      </div>
+      <div class="col-xs-3">
+        <%= link_to "Add New Recipe", new_recipe_path %>
+      </div>
+      <div class="col-xs-3">
+        <%= link_to "Add New Ingredient", new_ingredient_path %>
+      </div>
       </div>
     </div><!-- /class header -->
   </div><!-- /class container-fluid -->
