@@ -27,8 +27,12 @@ class RecipesController < ApplicationController
   end
 
   def update
-    
-
+    @recipe_form = RecipeForm.new(params[:recipe_form])
+    if @recipe_form.update
+      redirect_to recipe_path(@recipe_form.recipe)
+    else
+      render :edit
+    end
   end
 
 end
