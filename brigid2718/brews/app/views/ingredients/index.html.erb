@@ -1,9 +1,16 @@
 <h2>All Ingredients</h2>
-
-<ul>
   <% @ingredients.each do |ingredient| %>
-  <li><%= ingredient.name %>
-  <%= link_to "Edit Ingredient", edit_ingredient_path(ingredient), class: "btn btn-default btn-sm" %>
-  </li>
+  <div class="row">
+    <div class="col-xs-5">
+      <%= ingredient.name %>
+    </div>
+    <div class="col-xs-2">
+      <%= link_to "Edit Ingredient", edit_ingredient_path(ingredient), class: "btn btn-default btn-sm" %>
+    </div>
+    <div class="col-xs-2">
+      <%= button_to "Delete Ingredient", ingredient_path(ingredient), method: :delete, class: "btn btn-default btn-sm" %>
+    </div>
+  </div>
   <% end %>
-</ul>
+
+  <%= link_to "Add New Ingredient", new_ingredient_path, class: "btn btn-default btn-sm" %>

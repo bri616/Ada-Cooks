@@ -37,6 +37,12 @@ class IngredientsController < ApplicationController
   end
 
   def destroy
+    find_ingredient
+    if @ingredient.destroy
+      redirect_to ingredients_path
+    else
+      raise "error"
+    end
   end
 
   private
