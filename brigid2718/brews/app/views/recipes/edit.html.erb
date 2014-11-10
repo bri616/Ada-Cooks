@@ -25,9 +25,13 @@
 
 </div>
 
-  <%= submit_tag %>
+  <%= submit_tag nil, class: "btn btn-default btn-sm" %>
 
 <% end %>
+
+<div>
+  <%= button_to "Delete Recipe", recipe_path(@recipe), method: :delete, class: "btn btn-default btn-sm" %>
+</div>
 
 <!-- http://stackoverflow.com/questions/17839147/dynamically-add-fields-in-rails-with-out-nested-attributes -->
 

@@ -9,3 +9,11 @@
     quantity: <%= recipe_ingredient.amount %> <%= recipe_ingredient.units %>
   </li>
 <% end %>
+
+<div>
+  <%= link_to "Edit Recipe", edit_recipe_path(@recipe), {:class => "btn btn-default btn-sm"} %>
+</div>
+
+<div>
+  <%= button_to "Delete Recipe", recipe_path(@recipe), method: :delete, class: "btn btn-default btn-sm" %>
+</div>
